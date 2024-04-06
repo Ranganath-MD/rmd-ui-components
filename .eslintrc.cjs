@@ -7,12 +7,15 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "airbnb",
     "airbnb-typescript",
+    "prettier",
+    "plugin:prettier/recommended",
   ],
   ignorePatterns: [
     "dist",
     ".eslintrc.cjs",
     "tailwind.config.js",
     "vite.config.ts",
+    "prettier.config.cjs",
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
@@ -28,6 +31,7 @@ module.exports = {
     },
   ],
   rules: {
+    "prettier/prettier": "error",
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
@@ -35,4 +39,9 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "no-console": "error",
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 };
