@@ -1,7 +1,7 @@
 echo "Running pre-commit hook..."
 
 echo "Running tests..."
-pnpm test
+pnpm test-precommit
 
 echo "Running lint..."
 pnpm lint

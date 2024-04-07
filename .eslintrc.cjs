@@ -16,7 +16,7 @@ module.exports = {
 		"tailwind.config.js",
 		"vite.config.ts",
 		"prettier.config.cjs",
-		"setupTest.ts",
+		"src/setupTests.ts",
 	],
 	parser: "@typescript-eslint/parser",
 	plugins: ["react-refresh"],

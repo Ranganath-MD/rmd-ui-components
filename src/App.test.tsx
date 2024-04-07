@@ -5,14 +5,14 @@ import "@testing-library/jest-dom";
 import App from "./App";
 
 describe("App", () => {
-	it("should render the title", () => {
-		// Arrange : render the component under test
-		render(<App />);
+  it("should render the title", () => {
+    // Arrange : render the component under test
+    render(<App />);
 
-		// Act : get the element to test
+    // Act : get the element to test
 
-		// Assert
-		expect(screen.getByText("Hello, world!")).toBeInTheDocument();
-		expect(screen.getByTestId("app-wrapper")).toBeInTheDocument();
-	});
+    // Assert
+    expect(screen.getByText("Hello, world!")).toBeInTheDocument();
+    expect(screen.getByTestId("app-wrapper")).toBeInTheDocument();
+  });
 });
