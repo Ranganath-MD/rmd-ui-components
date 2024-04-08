@@ -17,7 +17,7 @@ $(npm publish --access public)
 # Commit the changes
 git add .
 git commit -m "RELEASE (serif) : new release $new_version"
-git push origin main
+git push origin master
 
 # Inform the user
 echo "Released $new_version"
