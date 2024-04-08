@@ -1,8 +1,30 @@
 {
   "name": "rmd-ui-components",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Ranganath M.D"
+  },
+  "description": "UI Components with React & Typescript with TailwindCSS for my projects",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,7 +35,8 @@
     "test-precommit": "vitest run",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "sh ./scripts/release.sh"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "vitest"
@@ -23,7 +46,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@storybook/test": "^8.0.6",
     "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.2",
+    "@testing-library/react": "^14.3.0",
     "@types/node": "^20.12.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -42,10 +65,10 @@
     "@storybook/blocks": "^8.0.6",
     "@storybook/react": "^8.0.6",
     "@storybook/react-vite": "^8.0.6",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/ui": "^1.4.0",
     "autoprefixer": "^10.4.19",
@@ -64,7 +87,8 @@
     "prettier": "^3.2.5",
     "storybook": "^8.0.6",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vite-plugin-dts": "^3.8.1"
   }
 }

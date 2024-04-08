@@ -5,7 +5,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -26,7 +27,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "tailwind.config.js"],
+  "include": ["src", "index.ts"],
+  "exclude": ["node_modules", "tailwind.config.js", "storybook-static"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

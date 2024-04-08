@@ -18,6 +18,7 @@ module.exports = {
     "vite.config.ts",
     "prettier.config.cjs",
     "src/setupTests.ts",
+    "storybook-static"
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
@@ -51,7 +52,6 @@ module.exports = {
       },
     ],
     "padding-line-between-statements": [
-      // ? https://eslint.org/docs/latest/rules/padding-line-between-statements
       "error",
       {
         blankLine: "always",
