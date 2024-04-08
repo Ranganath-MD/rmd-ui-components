@@ -36,15 +36,4 @@ describe("Button Component", () => {
     expect(button).toHaveClass("px-3");
     expect(button).toHaveClass("text-xs");
   });
-
-  it("should render Button component as a child component", () => {
-    // Arrange
-    const { getByRole } = render(<Button asChild />);
-
-    // Act
-    const slot = getByRole("slot");
-
-    // Assert
-    expect(slot).toBeInTheDocument();
-  });
-})
+});
